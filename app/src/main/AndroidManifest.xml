@@ -13,11 +13,14 @@
         android:theme="@style/Theme.ClubIt"
         tools:targetApi="31">
         <activity
+            android:name=".NotificationActivity"
+            android:exported="false"
+            android:label="Notification"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -3,6 +3,7 @@ package com.example.clubit;
 import static androidx.core.content.ContentProviderCompat.requireContext;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -66,9 +67,16 @@ public class HomeFragment extends android.app.Fragment {
         ImageButton searchButton = actionBarView.findViewById(R.id.searchButton);
         ImageButton notificationButton = actionBarView.findViewById(R.id.notificationButton);
 
-
-
-
+        notificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigatetoActivity();
+            }
+        });
         return rootview;
+    }
+    private void navigatetoActivity() {
+        Intent intent = new Intent(getActivity(), NotificationActivity.class);
+        startActivity(intent);
     }
 }

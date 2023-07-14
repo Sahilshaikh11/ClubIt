@@ -4,63 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_shade">
+    android:background="@color/white_shade">
 
-    <TextView
-        android:id="@+id/post_content2"
-        android:layout_width="350dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/post_card"
+        android:layout_width="380dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Content goes here................"
-        android:textColor="@color/white_shade"
+        app:cardBackgroundColor="@color/white_shade"
+        app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post_content" />
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/chip4"
-        colo
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="28dp"
-
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-
-        android:backgroundTint="@color/orange"
-        android:text="(Domain)"
-        android:textColor="@color/orange_transparent"
-        app:chipCornerRadius="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/post_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:textEndPadding="8px"
-        app:textStartPadding="8px">
+        android:backgroundTint="@color/black_shade"
+        android:layout_marginTop="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
 
-    </com.google.android.material.chip.Chip>
+        <com.google.android.material.chip.Chip
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/chip5"
+            android:text="Domain"
+            android:background="@color/dark_orange"
+            android:textColor="@color/orange"
+            app:chipCornerRadius="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/post_content"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Topic"
-        android:textColor="@color/white_shade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chip4" />
+        <TextView
+            android:id="@+id/post_topic"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="8dp"
+            android:text="Topic"
+            android:textColor="@color/white_shade"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chip4" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="246dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
-        android:text="time"
-        android:textColor="@color/white_shade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/chip4"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/post_content"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:text="Content goes here................"
+            android:textColor="@color/white_shade"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_topic" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="15dp"
+            android:text="time"
+            android:textColor="@color/white_shade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chip5"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
